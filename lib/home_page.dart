@@ -20,30 +20,31 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(children: [
             // Container(height: 50,),
-            Header(),
-            SizedBox(height: 480, child: SlidingPage()),
-            AboutUsSection(),
+            const Header(),
+            const SizedBox(height: 480, child: SlidingPage()),
+            const AboutUsSection(),
             StatsListSection(),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            WhyUsSection(),
-            SizedBox(
+            // ProductList(),
+            const WhyUsSection(),
+            const SizedBox(
               height: 50,
             ),
-            ServiceListSection(),
+            const ServiceListSection(),
             CustomerTestimonialsSection(),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            ApplicationsForm(),
-            FeedbackForm(),
-            Footer()
+            const ApplicationsForm(),
+            const FeedbackForm(),
+            const Footer()
           ]),
         ),
       ),

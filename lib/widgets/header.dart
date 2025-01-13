@@ -1,4 +1,3 @@
-import 'package:amarach/constants.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -25,14 +24,13 @@ class Header extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                       image: const DecorationImage(
-                        image: NetworkImage(
-                            'https://sacco.newtechplc.com/logo.png',),
-                        fit: BoxFit.fitWidth
-                      ),
+                          image: NetworkImage(
+                            'https://sacco.newtechplc.com/logo.png',
+                          ),
+                          fit: BoxFit.fitWidth),
                     ),
                   ),
                   const SizedBox(width: 10),
-
                 ],
               ),
               // Join Link aligned to the right
@@ -43,16 +41,14 @@ class Header extends StatelessWidget {
                           onPressed: () {},
                           child: const Text(
                             'Join',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                         ),
                         TextButton(
                           onPressed: () {},
                           child: const Text(
                             'Contact Us!',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                         ),
                       ],

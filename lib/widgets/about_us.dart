@@ -17,22 +17,22 @@ class AboutUsSection extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 20 : 50),
             child: isSmallScreen
                 ? Column(
-              children: [
-                _buildTextSection(isSmallScreen),
-                const SizedBox(height: 20),
-              //  _buildImageSection(isSmallScreen),
-              ],
-            )
+                    children: [
+                      _buildTextSection(isSmallScreen),
+                      const SizedBox(height: 20),
+                      //  _buildImageSection(isSmallScreen),
+                    ],
+                  )
                 : Row(
-              children: [
-                Expanded(
-                  child: _buildTextSection(isSmallScreen),
-                ),
-                // Expanded(
-                //   child: _buildImageSection(isSmallScreen),
-                // ),
-              ],
-            ),
+                    children: [
+                      Expanded(
+                        child: _buildTextSection(isSmallScreen),
+                      ),
+                      // Expanded(
+                      //   child: _buildImageSection(isSmallScreen),
+                      // ),
+                    ],
+                  ),
           );
         },
       ),
@@ -42,12 +42,12 @@ class AboutUsSection extends StatelessWidget {
   Widget _buildTextSection(bool isSmallScreen) {
     return Column(
       crossAxisAlignment:
-      isSmallScreen ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+          isSmallScreen ? CrossAxisAlignment.center : CrossAxisAlignment.start,
       children: [
         Text(
           'About Us',
-          style:  TextStyle(
-            color:titleText,
+          style: TextStyle(
+            color: titleText,
             fontSize: 28,
             fontWeight: FontWeight.bold,
           ),
@@ -57,25 +57,27 @@ class AboutUsSection extends StatelessWidget {
         Text(
           "We Help our customers and Members Grow Their Business",
           style: TextStyle(
-              color: titleText,
+            color: titleText,
             fontSize: 18,
             fontWeight: FontWeight.normal,
           ),
           textAlign: isSmallScreen ? TextAlign.center : TextAlign.left,
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         TabBar(
           labelColor: Colors.blueGrey,
           labelStyle: const TextStyle(fontSize: 20),
           unselectedLabelColor: Colors.blueGrey,
           indicatorColor: navBar,
           tabs: const [
-
             Tab(text: 'Story'),
-            Tab(text: 'Vision',),
+            Tab(
+              text: 'Vision',
+            ),
             Tab(text: 'Mission'),
             Tab(text: 'Value'),
-
           ],
         ),
         SizedBox(

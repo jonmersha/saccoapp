@@ -25,7 +25,7 @@ class StatsListSection extends StatelessWidget {
     },
   ];
 
-   StatsListSection({super.key});
+  StatsListSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,16 +34,18 @@ class StatsListSection extends StatelessWidget {
         bool isSmallScreen = constraints.maxWidth < 800;
 
         return Container(
-          color: Colors.blue.shade500,
+          color: Colors.blue.shade100,
           width: double.infinity,
           padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 20 : 50),
           child: Column(
-            crossAxisAlignment: isSmallScreen ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+            crossAxisAlignment: isSmallScreen
+                ? CrossAxisAlignment.center
+                : CrossAxisAlignment.start,
             children: [
               Text(
-                'Our Achievements',
-                style: const TextStyle(
-                  color: Colors.white,
+                'Our Achievements and Milestones',
+                style: TextStyle(
+                  color: Colors.blueGrey.shade900,
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
@@ -85,16 +87,15 @@ class StatsListSection extends StatelessWidget {
         Icon(
           stat['icon'],
           size: 50,
-          color: Colors.white, // Icon color
+          color: Colors.blueGrey.shade700, // Icon color
         ),
         const SizedBox(height: 10),
         Text(
           stat['title'],
           style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.blueGrey),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 5),
@@ -140,13 +141,13 @@ class _VisibilityCounterState extends State<VisibilityCounter> {
       child: _isVisible
           ? FastCounter(endValue: widget.endValue)
           : const Text(
-        '0',
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
-      ),
+              '0',
+              style: TextStyle(
+                fontSize: 60,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueGrey,
+              ),
+            ),
     );
   }
 }
@@ -170,9 +171,9 @@ class FastCounter extends StatelessWidget {
         return Text(
           value.toString(),
           style: const TextStyle(
-            fontSize: 22,
+            fontSize: 60,
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: Colors.blueGrey,
           ),
         );
       },
