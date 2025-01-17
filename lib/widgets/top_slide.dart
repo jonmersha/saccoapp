@@ -1,4 +1,5 @@
 import 'package:amarach/constants.dart';
+import 'package:amarach/utils/network_access.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -11,6 +12,14 @@ class SlidingPage extends StatefulWidget {
 
 class _SlidingPageState extends State<SlidingPage> {
   int _currentIndex = 0;
+  late Future<List<dynamic>> data;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    data=fetchData('13');
+  }
 
   final List<Map<String, String>> _slides = [
     {
